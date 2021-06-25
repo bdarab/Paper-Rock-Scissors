@@ -35,8 +35,19 @@ Scissors.innerHTML = `
 let choices = possibleChoices.forEach((possibleChoice) =>
 	possibleChoice.addEventListener('click', (e) => {
 		userChoice = e.target.getAttribute('value');
-		randomChoice = Math.floor(Math.random() * possibleChoices.length);
-		computerChoice = possibleChoices[randomChoice].getAttribute('value');
+		let possibleChoice = [
+			{
+				name: 'rock',
+			},
+			{
+				name: 'Paper',
+			},
+			{
+				name: 'Scissors',
+			},
+		];
+		randomChoice = Math.floor(Math.random() * possibleChoice.length);
+		computerChoice = possibleChoice[randomChoice]['name'];
 		console.log(userChoice, computerChoice);
 	})
 );
