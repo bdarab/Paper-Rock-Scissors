@@ -15,7 +15,7 @@ body {
 	text-align: center;
 }
 
-.Btns {
+.Btn {
 	display: flex;
 	justify-content: space-evenly;
 	margin-top: 2rem;

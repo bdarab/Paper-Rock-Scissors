@@ -4,7 +4,7 @@ const appContainer = document.querySelector('#app');
 const title = document.createElement('h1');
 const subTitle = document.createElement('h2');
 const btnContainer = document.createElement('div');
-// let possibleChoices = document.querySelectorAll('button');
+let btnChoices = document.querySelectorAll('button');
 let Rock = document.createElement('button');
 let Paper = document.createElement('button');
 let Scissors = document.createElement('button');
@@ -17,23 +17,26 @@ appContainer.appendChild(btnContainer);
 btnContainer.appendChild(Rock);
 btnContainer.appendChild(Paper);
 btnContainer.appendChild(Scissors);
-btnContainer.classList.add('Btns');
+btnContainer.classList.add('Btn');
 
-Rock.innerHTML = `
-	<i class="fas fa-hand-rock" data-value="rock"><p>Rock</p></i>`;
-
-Paper.innerHTML = `
-<i class="fas fa-hand-paper" data-value="paper"><p>Paper</p></i>`;
-
-Scissors.innerHTML = `
-<i class="fas fa-hand-scissors" data-value="scissors"><p>Scissors</p></i>`;
-
-// Create functionality
 let possibleChoices = [Rock, Paper, Scissors];
 
-let userChoice = possibleChoices.forEach((possibleChoice) =>
+Rock.innerHTML = `
+	<i class="fas fa-hand-rock" value="rock"><p>Rock</p></i>`;
+
+Paper.innerHTML = `
+<i class="fas fa-hand-paper" value="paper"><p>Paper</p></i>`;
+
+Scissors.innerHTML = `
+<i class="fas fa-hand-scissors" value="scissors"><p>Scissors</p></i>`;
+
+// Create functionality
+
+let choices = possibleChoices.forEach((possibleChoice) =>
 	possibleChoice.addEventListener('click', (e) => {
-		userChoice = e.target.getAttribute('data-value');
-		console.log(userChoice);
+		userChoice = e.target.getAttribute('value');
+		randomChoice = Math.floor(Math.random() * possibleChoices.length);
+		computerChoice = possibleChoices[randomChoice].getAttribute('value');
+		console.log(userChoice, computerChoice);
 	})
 );
