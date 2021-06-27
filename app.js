@@ -1,10 +1,12 @@
 const btnContainer = document.querySelector('.btnContainer');
+const btn = document.querySelectorAll('.btnItem');
 const h2 = document.querySelector('.result h2');
 const selections = ['rock', 'paper', 'scissors'];
 
 // Functionality
 
 let Round = () => {
+	// for (i = 0; i < 6; i++) {
 	let count = 1;
 	// add computer selection random choice
 	function computerPlay() {
@@ -15,7 +17,7 @@ let Round = () => {
 	}
 	// add player selection click event
 	let playerSelection = function () {
-		btnContainer.addEventListener('click', onClick);
+		btn.forEach((btn) => btn.addEventListener('click', onClick));
 	};
 
 	let onClick = function (e) {
@@ -27,4 +29,5 @@ let Round = () => {
 
 	document.addEventListener('DOMContentLoaded', playerSelection);
 };
+// };
 Round();
