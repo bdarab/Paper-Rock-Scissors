@@ -19,29 +19,14 @@
 				<br />
 				<h3>Let's play a game with your computer</h3>
 			</header>
-			<main>
-				<ul class="btnContainer">
-					<li class="btnItem" data-id="1" data-name="rock">
-						<i class="fas fa-hand-rock" data-id="1" data-name="rock"></i>
-					</li>
-					<li class="btnItem" data-id="2" data-name="paper">
-						<i class="fas fa-hand-paper" data-id="2" data-name="paper"></i>
-					</li>
-					<li class="btnItem" data-id="3" data-name="scissors">
-						<i
-							class="fas fa-hand-scissors"
-							data-id="3"
-							data-name="scissors"
-						></i>
-					</li>
-				</ul>
-			</main>
+
 			<div class="result">
-				<h2>Round:</h2>
+				<h2 id="roundCount"></h2>
 				<br />
-				<h3>Player Score:</h3>
-				<h3>Computer Score:</h3>
-				<h2>Winner:</h2>
+				<h3 id="playerScore"></h3>
+				<h3 id="computerScore"></h3>
+				<h3 id="drawCount"></h3>
+				<h2 id="roundWinner"></h2>
 			</div>
 			<br /><br />
 			<div class="final">
@@ -52,7 +37,9 @@
 				<h1>And The Game Winner Is:</h1>
 			</div>
 		</div>
-
+		<div id="btnContainer">
+			<button id="btnItem">Play Another Round</button>
+		</div>
 		<script src="app.js"></script>
 	</body>
 </html>

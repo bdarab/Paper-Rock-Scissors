@@ -20,19 +20,21 @@ header {
 	margin: 2rem;
 }
 
-.btnContainer {
+#btnContainer {
 	display: flex;
 	justify-content: center;
 	list-style: none;
 }
 
-.btnItem {
-	border: none;
-	background: none;
+#btnItem {
+	/* border: 1px solid white; */
+	border-radius: 5%;
+	background: rgb(58, 16, 58);
+	box-shadow: 2px 2px 5px lightgray;
 	color: antiquewhite;
 	cursor: pointer;
 	display: inline;
-	font-size: 5rem;
+	font-size: 2rem;
 	margin: 5rem;
 	text-align: center;
 }
